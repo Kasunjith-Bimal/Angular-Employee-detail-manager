@@ -13,8 +13,9 @@ import { EmployeeComponent } from './employee/employee.component';
 import { EmployeelistComponent } from './employee/employeelist.component';
 import { EmployeeaddComponent } from './employee/employeeadd.component';
 import { EmployeeeditComponent } from './employee/employeeedit.component';
-
-
+import { EmployeeService } from './employee/employee.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule,JsonpModule } from '@angular/http'
 
 
 @NgModule({
@@ -31,9 +32,14 @@ import { EmployeeeditComponent } from './employee/employeeedit.component';
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpModule,
+    JsonpModule
+
   ],
-  providers: [EventService],
+  providers: [EventService,EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
