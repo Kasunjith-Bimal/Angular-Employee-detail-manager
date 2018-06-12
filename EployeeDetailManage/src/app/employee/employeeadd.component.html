@@ -1,3 +1,12 @@
-<p>
-  employeeadd works!
-</p>
+
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  
+    Employee Name
+    <input type="text" name="employeeName" [(ngModel)]="employeeobj.employeeName" >
+    Employee Age
+    <input type="text" name="employeeAge" [(ngModel)]="employeeobj.employeeAge">
+    Employee Telephone number 
+    <input type="text" name="employeeTelephoneNumber" [(ngModel)]="employeeobj.employeeTelephoneNumber">
+
+    <input type="submit" value="Add Employee">
+</form>
